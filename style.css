@@ -1,0 +1,95 @@
+/* Base styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todo-input-grid,
+.todo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.todo-input-grid {
+  margin-bottom: 20px;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.name-input,
+.date-input {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-todo-button,
+.delete-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background-color: darkred;
+}
+
+.add-todo-button:hover,
+.delete-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .todo-input-grid,
+  .todo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-todo-button {
+    width: 100%;
+  }
+
+  .todo-input-grid input {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .name-input,
+  .date-input {
+    font-size: 14px;
+  }
+
+  .add-todo-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .delete-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
